@@ -14,6 +14,15 @@
       href="https://fonts.googleapis.com/css2?family=Koulen"
       rel="stylesheet"
     />
+    <script>
+      // Verificar si l'usuari està autenticat
+      document.addEventListener('DOMContentLoaded', function () {
+        const isAuthenticated = localStorage.getItem('isAuthenticated');
+        if (!isAuthenticated) {
+          window.location.href = '/login.html';
+        }
+      });
+    </script>
   </head>
 
   <body>
@@ -65,14 +74,6 @@
           >
             <li>
               <a
-                href="/src/login.html"
-                class="block py-2 pl-3 pr-4 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 dark:text-white md:dark:text-blue-500"
-                aria-current="page"
-                >Login</a
-              >
-            </li>
-            <li>
-              <a
                 href="/src/index.html"
                 class="block py-2 pl-3 pr-4 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 dark:text-white md:dark:text-blue-500"
                 aria-current="page"
@@ -99,6 +100,14 @@
                 class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
                 >Informació</a
               >
+            </li>
+            <li>
+              <button
+                id="logout-button"
+                class="block py-2 pl-3 pr-4 text-red-600 rounded hover:bg-red-100 md:hover:bg-transparent md:border-0 md:hover:text-red-700 md:p-0 dark:text-red-400 dark:hover:text-red-500 dark:hover:bg-gray-700 dark:hover:bg-transparent"
+              >
+                Logout
+              </button>
             </li>
           </ul>
         </div>
@@ -136,8 +145,12 @@
         <!-- Fi de text sobreposat -->
       </div>
     </div>
-
     <!-- Fi de container amb imatge de fons -->
+
+
+
   </body>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.0.0/flowbite.min.js"></script>
+  <script type="module" src="../js/components/Navbar.js"></script>
+  
 </html>

@@ -1,210 +1,200 @@
 <!DOCTYPE html>
 <html lang="ca">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>YAMAHA</title>
+    <link rel="stylesheet" href="../styles.css" />
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="../../resources/img/Yamaha-Logo.webp"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Koulen"
+      rel="stylesheet"
+    />
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>YAMAHA</title>
-  <link rel="stylesheet" href="../styles.css" />
-  <link rel="icon" type="image/x-icon" href="../../resources/img/Yamaha-Logo.webp" />
-  <link href="https://fonts.googleapis.com/css2?family=Koulen" rel="stylesheet" />
-</head>
+  <body class="bg-gray-100">
+    <!-- Nabvar de navegació de la pàgina -->
+    <nav class="bg-white border-gray-200 dark:bg-gray-900">
+      <div
+        class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4"
+      >
+        <a href="../index.html" class="flex items-center">
+          <img
+            src="../../resources/img/Yamaha-Logo.webp"
+            class="h-8 mr-3"
+            alt="Logotip de yamaha"
+          />
+          <span
+            class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white"
+            >YAMAHA</span
+          >
+        </a>
+        <button
+          data-collapse-toggle="navbar-default"
+          type="button"
+          class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+          aria-controls="navbar-default"
+          aria-expanded="false"
+        >
+          <span class="sr-only">Open main menu</span>
+          <svg
+            class="w-5 h-5"
+            aria-hidden="true"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 17 14"
+          >
+            <path
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M1 1h15M1 7h15M1 13h15"
+            />
+          </svg>
+        </button>
+        <div class="hidden w-full md:block md:w-auto" id="navbar-default">
+          <ul
+            class="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700"
+          >
+            <li>
+              <a
+                href="../index.html"
+                class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+                >Inici</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="block py-2 pl-3 pr-4 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 dark:text-white md:dark:text-blue-500"
+                aria-current="page"
+                >Models</a
+              >
+            </li>
+            <li>
+              <a
+                href="../nosaltres/nosaltres.html"
+                class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+                >Nosaltres</a
+              >
+            </li>
+            <li>
+              <a
+                href="../informacio/informacio.html"
+                class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+                >Informació</a
+              >
+            </li>
+            <li>
+              <button
+                id="logout-button"
+                class="block py-2 pl-3 pr-4 text-red-600 rounded hover:bg-red-100 md:hover:bg-transparent md:border-0 md:hover:text-red-700 md:p-0 dark:text-red-400 dark:hover:text-red-500 dark:hover:bg-gray-700 dark:hover:bg-transparent"
+              >
+                Logout
+              </button>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- Fi de nabvar de navegació de la pàgina -->
 
-<body class="bg-gray-100">
-  <!-- Nabvar de navegació de la pàgina -->
-  <nav class="bg-white border-gray-200 dark:bg-gray-900">
-    <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-      <a href="../index.html" class="flex items-center">
-        <img src="../../resources/img/Yamaha-Logo.webp" class="h-8 mr-3" alt="Logotip de yamaha" />
-        <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">YAMAHA</span>
-      </a>
-      <button data-collapse-toggle="navbar-default" type="button"
-        class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
-        aria-controls="navbar-default" aria-expanded="false">
-        <span class="sr-only">Open main menu</span>
-        <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
-          <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-            d="M1 1h15M1 7h15M1 13h15" />
+    <!-- Títol de la pàgina -->
+    <div class="relative h-96 overflow-hidden">
+      <img
+        class="parallax w-full h-full object-cover"
+        src="/resources/img/portada_Yamaha.webp"
+        alt="Description of image"
+      />
+      <div
+        class="absolute top-0 left-0 w-full h-full flex items-center justify-center"
+      >
+        <div
+          class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white text-center"
+        >
+          <h1
+            class="flex flex-nowrap text-center text-6xl sm:text-6xl font-[Koulen]"
+          >
+            Models
+          </h1>
+          <hr />
+        </div>
+      </div>
+    </div>
+
+    <!-- Fi de títol de la pàgina -->
+
+    <div 
+      id="moto-container"
+      class="p-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6"
+    >
+      <!-- El contingut es generarà dinàmicament -->
+    </div>
+
+    <!-- Botó de consulta d'altres models -->
+    <div class="flex flex-nowrap justify-center items-center footer mb-10">
+      <a
+        target="_blank"
+        href="#"
+        class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-gray-500 hover:text-gray-800"
+      >
+        <h6>Consulta altres models</h6>
+        <svg
+          class="w-3.5 h-3.5 ml-2"
+          aria-hidden="true"
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 14 10"
+        >
+          <path
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M1 5h12m0 0L9 1m4 4L9 9"
+          />
         </svg>
-      </button>
-      <div class="hidden w-full md:block md:w-auto" id="navbar-default">
-        <ul
-          class="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
-          <li>
-            <a href="../index.html"
-              class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Inici</a>
+      </a>
+    </div>
+    <!-- fi de botó de consulta d'altres models -->
+
+    <footer class="bg-gray-200 py-4">
+      <div class="container mx-auto text-center">
+        <p class="text-gray-600">Enllaços a altres pàgines:</p>
+        <ul class="mt-2">
+          <li class="inline-block mr-4">
+            <a href="../index.html" class="text-blue-500 hover:text-blue-700"
+              >Inici</a
+            >
           </li>
-          <li>
-            <a href="#"
-              class="block py-2 pl-3 pr-4 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 dark:text-white md:dark:text-blue-500"
-              aria-current="page">Models</a>
+          <li class="inline-block mr-4">
+            <a href="" class="text-blue-500 hover:text-blue-700">Models</a>
           </li>
-          <li>
-            <a href="../nosaltres/nosaltres.html"
-              class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Nosaltres</a>
+          <li class="inline-block mr-4">
+            <a
+              href="../nosaltres/nosaltres.html"
+              class="text-blue-500 hover:text-blue-700"
+              >Nosaltres</a
+            >
           </li>
-          <li>
-            <a href="../informacio/informacio.html"
-              class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Informació</a>
+          <li class="inline-block">
+            <a
+              href="../informacio/informacio.html"
+              class="text-blue-500 hover:text-blue-700"
+              >Informació</a
+            >
           </li>
         </ul>
       </div>
-    </div>
-  </nav>
-  <!-- Fi de nabvar de navegació de la pàgina -->
-
-  <!-- Títol de la pàgina -->
-  <div class="relative h-96 overflow-hidden">
-    <img class="parallax w-full h-full object-cover" src="/resources/img/portada_Yamaha.webp" alt="Description of image" />
-    <div class="absolute top-0 left-0 w-full h-full flex items-center justify-center">
-      <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white text-center">
-        <h1 class="flex flex-nowrap text-center text-6xl sm:text-6xl font-[Koulen]">
-          Models
-        </h1>
-        <hr />
-      </div>
-    </div>
-  </div>
-
-  <!-- Fi de títol de la pàgina -->
-
-  <!-- Container amb llistat de motos -->
-  <div class="flex justify-center flex-wrap items-center py-10 gap-10">
-    <!-- Card -->
-    <div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
-      <a href="#">
-        <img class="rounded-t-lg" src="../../resources/img/mt-09.webp" alt="Imatge de una moto naked" />
-      </a>
-      <div class="p-5">
-        <a href="#">
-          <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-            MT-10 SP
-          </h5>
-        </a>
-        <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
-          La MT-10 SP está preparada para introducirte en la experiencia de
-          pilotaje definitiva. Su motor CP4 es el más potente de la gama de
-          Hyper Naked. Y sus radicales suspensiones electrónicas semiactivas,
-          junto con los sistemas de asistencia al pilotaje de alta tecnología,
-          representan el amanecer de una nueva era del control total
-          ride-by-wire.
-        </p>
-        <a href="./hyper_naked/mt-09_naked.html"
-          class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-neutral-600 rounded-lg hover:bg-neutral-700 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
-          Saber-ne més
-          <svg class="w-3.5 h-3.5 ml-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
-            viewBox="0 0 14 10">
-            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-              d="M1 5h12m0 0L9 1m4 4L9 9" />
-          </svg>
-        </a>
-      </div>
-    </div>
-    <!-- Fi de card -->
-
-    <!-- Card -->
-    <div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
-      <a href="#">
-        <img class="rounded-t-lg" src="../../resources/img/Yamaha-R1.webp"
-          alt="Imatge d'un plat de peus de porc servits al restaurant" />
-      </a>
-      <div class="p-5">
-        <a href="#">
-          <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-            R1
-          </h5>
-        </a>
-        <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
-          La R1 ha superado constantemente los límites de la tecnología
-          Supersport desde que el modelo original cambió para siempre el mundo
-          del motociclismo hace más de 25 años. Esta extraordinaria
-          motocicleta de competición, diseñada sin concesiones, es la
-          superdeportiva más excitante de nuestro tiempo.
-        </p>
-        <a href="#"
-          class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-neutral-600 rounded-lg hover:bg-neutral-700 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
-          Saber-ne més
-          <svg class="w-3.5 h-3.5 ml-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
-            viewBox="0 0 14 10">
-            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-              d="M1 5h12m0 0L9 1m4 4L9 9" />
-          </svg>
-        </a>
-      </div>
-    </div>
-    <!-- Fi de card -->
-
-    <!-- Card -->
-    <div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
-      <a href="#">
-        <img class="rounded-t-lg" src="../../resources/img/tenere_700.webp"
-          alt="Imatge d'un plat de pop a la gallega servit al restaurant" />
-      </a>
-      <div class="p-5">
-        <a href="#">
-          <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-            TÉNÉRÉ 700 WORLD RALLY
-          </h5>
-        </a>
-        <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
-          En 1983, el primer modelo Ténéré de Yamaha lo cambió todo. Con su
-          depósito de gran capacidad, su robustez y su versatilidad para
-          llegar a cualquier lugar, esta motocicleta superventas abrió una
-          nueva y excitante era en el pilotaje de aventura. Cuarenta años
-          después, la exclusiva Ténéré 700 World Rally de larga distancia
-          rinde homenaje a las motos Yamaha que ganaron el Dakar, y te da la
-          libertad para ir adonde quieras.
-        </p>
-        <a href="#"
-          class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-neutral-600 rounded-lg hover:bg-neutral-700 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
-          Saber-ne més
-          <svg class="w-3.5 h-3.5 ml-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
-            viewBox="0 0 14 10">
-            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-              d="M1 5h12m0 0L9 1m4 4L9 9" />
-          </svg>
-        </a>
-      </div>
-    </div>
-    <!-- Fi de card 3 -->
-  </div>
-  <!-- Fi de container -->
-
-  <!-- Botó de consulta d'altres models -->
-  <div class="flex flex-nowrap justify-center items-center footer mb-10">
-    <a target="_blank" href="#"
-      class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-gray-500 hover:text-gray-800">
-      <h6>Consulta altres models</h6>
-      <svg class="w-3.5 h-3.5 ml-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
-        viewBox="0 0 14 10">
-        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-          d="M1 5h12m0 0L9 1m4 4L9 9" />
-      </svg>
-    </a>
-  </div>
-  <!-- fi de botó de consulta d'altres models -->
-
-  <footer class="bg-gray-200 py-4">
-    <div class="container mx-auto text-center">
-      <p class="text-gray-600">Enllaços a altres pàgines:</p>
-      <ul class="mt-2">
-        <li class="inline-block mr-4">
-          <a href="../index.html" class="text-blue-500 hover:text-blue-700">Inici</a>
-        </li>
-        <li class="inline-block mr-4">
-          <a href="" class="text-blue-500 hover:text-blue-700">Models</a>
-        </li>
-        <li class="inline-block mr-4">
-          <a href="../nosaltres/nosaltres.html" class="text-blue-500 hover:text-blue-700">Nosaltres</a>
-        </li>
-        <li class="inline-block">
-          <a href="../informacio/informacio.html" class="text-blue-500 hover:text-blue-700">Informació</a>
-        </li>
-      </ul>
-    </div>
-  </footer>
-  <script type="module" src="simple_parallax.js"></script>
-</body>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.0.0/flowbite.min.js"></script>
-
+    </footer>
+    <script type="module" src="simple_parallax.js"></script>
+  </body>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.0.0/flowbite.min.js"></script>
+  <script type="module" src="../../js/pages/models.js"></script>
+  <script type="module" src="../../js/components/Navbar.js"></script>
 </html>

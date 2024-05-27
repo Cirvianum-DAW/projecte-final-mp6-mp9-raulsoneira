@@ -15,9 +15,13 @@ document.addEventListener('DOMContentLoaded', function () {
       const user = await login(username, password);
 
       if (user.admin === true) {
+        // Establir la sessió
+        localStorage.setItem('isAuthenticated', 'true');
         // Redirigeix a la pàgina d'administrador
         window.location.href = '../../src/index.html';
       } else {
+        // Establir la sessió
+        localStorage.setItem('isAuthenticated', 'true');
         // Redirigeix a la pàgina d'usuari normal
         window.location.href = '../../src/models/models.html';
       }
