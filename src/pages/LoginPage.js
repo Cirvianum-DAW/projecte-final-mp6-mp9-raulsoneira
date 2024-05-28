@@ -18,12 +18,12 @@ document.addEventListener('DOMContentLoaded', function () {
         // Establir la sessió
         localStorage.setItem('isAuthenticated', 'true');
         // Redirigeix a la pàgina d'administrador
-        window.location.href = '../../src/index.html';
+        window.location.href = '/index.html';
       } else {
         // Establir la sessió
         localStorage.setItem('isAuthenticated', 'true');
         // Redirigeix a la pàgina d'usuari normal
-        window.location.href = '../../src/models/models.html';
+        window.location.href = '/models/models.html';
       }
     } catch (error) {
       console.error(error);
