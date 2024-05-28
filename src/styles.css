@@ -1,8 +1,4 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-@keyframes colorChange {
+/* @keyframes colorChange {
   0% {
     color: white;
   }
@@ -20,4 +16,4 @@
 
 .triangle {
   clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
-}
+} */
