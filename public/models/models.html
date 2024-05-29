@@ -3,9 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>YAMAHA</title>
+    <title>YAMAHA Models</title>
     <link rel="stylesheet" href="/src/input.css" />
-
     <link
       rel="icon"
       type="image/x-icon"
@@ -18,16 +17,16 @@
   </head>
 
   <body class="bg-gray-100">
-    <!-- Nabvar de navegació de la pàgina -->
-    <nav class="bg-white border-gray-200 dark:bg-gray-900">
+    <!-- Navbar -->
+    <nav class="bg-white border-b border-gray-200 dark:bg-gray-900 shadow">
       <div
         class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4"
       >
         <a href="/public/index.html" class="flex items-center">
           <img
             src="/public/resources/img/Yamaha-Logo.webp"
-            class="h-8 mr-3"
-            alt="Logotip de yamaha"
+            class="h-10 mr-3"
+            alt="Yamaha Logo"
           />
           <span
             class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white"
@@ -103,46 +102,79 @@
         </div>
       </div>
     </nav>
-    <!-- Fi de nabvar de navegació de la pàgina -->
+    <!-- Fi de navbar -->
 
     <!-- Títol de la pàgina -->
     <div class="relative h-96 overflow-hidden">
       <img
-        class="parallax w-full h-full object-cover"
+        class="w-full h-full object-cover"
         src="/public/resources/img/portada_Yamaha.webp"
-        alt="Description of image"
+        alt="Yamaha Models"
       />
+      <div
+        class="absolute top-0 left-0 w-full h-full bg-black opacity-50"
+      ></div>
       <div
         class="absolute top-0 left-0 w-full h-full flex items-center justify-center"
       >
-        <div
-          class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white text-center"
-        >
-          <h1
-            class="flex flex-nowrap text-center text-6xl sm:text-6xl font-[Koulen]"
-          >
-            Models
-          </h1>
-          <hr />
+        <div class="text-white text-center">
+          <h1 class="text-5xl font-bold font-[Koulen]">Models</h1>
         </div>
       </div>
     </div>
-
     <!-- Fi de títol de la pàgina -->
 
+    <!-- Cercador i Filtre -->
+    <div class="container mx-auto p-4">
+      <div class="flex justify-center items-center mb-6">
+        <input
+          type="text"
+          id="search"
+          placeholder="Cerca per nom..."
+          class="w-1/2 px-3 py-2 border rounded-l"
+        />
+        <select
+          id="filter"
+          class="px-3 py-2 border-t border-b border-r rounded-r"
+        >
+          <option value="">Tots els models</option>
+          <option value="Naked">Naked</option>
+          <option value="Supersport">Supersport</option>
+          <option value="Adventure">Adventure</option>
+        </select>
+      </div>
+    </div>
+
+    <!-- Botó per afegir nova moto -->
+    <div class="container mx-auto p-4 text-center">
+      <a
+        href="editMoto.html"
+        class="inline-flex items-center px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700"
+        >Add New Moto</a
+      >
+    </div>
+
+    <!-- Notificació -->
     <div
-      id="moto-container"
-      class="p-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6"
-    >
-      <!-- El contingut es generarà dinàmicament -->
+      id="notification"
+      class="hidden bg-green-500 text-white text-center p-2 rounded mb-4"
+    ></div>
+
+    <!-- Container amb llistat de motos -->
+    <div class="container mx-auto p-4">
+      <div
+        id="moto-container"
+        class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6"
+      >
+        <!-- El contingut es generarà dinàmicament -->
+      </div>
     </div>
 
     <!-- Botó de consulta d'altres models -->
-    <div class="flex flex-nowrap justify-center items-center footer mb-10">
+    <div class="flex justify-center items-center footer mb-10">
       <a
-        target="_blank"
         href="#"
-        class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-gray-500 hover:text-gray-800"
+        class="inline-flex items-center px-3 py-2 text-sm font-medium text-gray-500 hover:text-gray-800"
       >
         <h6>Consulta altres models</h6>
         <svg
@@ -162,8 +194,9 @@
         </svg>
       </a>
     </div>
-    <!-- fi de botó de consulta d'altres models -->
+    <!-- Fi de botó de consulta d'altres models -->
 
+    <!-- Footer -->
     <footer class="bg-gray-200 py-4">
       <div class="container mx-auto text-center">
         <p class="text-gray-600">Enllaços a altres pàgines:</p>
@@ -195,6 +228,8 @@
         </ul>
       </div>
     </footer>
+    <!-- Fi de footer -->
+
     <script type="module" src="simple_parallax.js"></script>
   </body>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.0.0/flowbite.min.js"></script>
