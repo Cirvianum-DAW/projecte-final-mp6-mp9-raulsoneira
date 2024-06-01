@@ -1,4 +1,5 @@
 import fetchFromApi from './fetchAPI.js';
+import { createUser } from './user.js';
 
 async function login(username, password) {
   console.log('login');
@@ -29,13 +30,7 @@ async function register(username, password) {
     admin: false, // Assign 'user' role by default
   };
 
-  // Send a POST request to create a new user
-  const user = await fetchFromApi('users', {
-    method: 'POST',
-    body: newUser,
-  });
-
-  return user;
+  return createUser(newUser);
 }
 
 function logout() {

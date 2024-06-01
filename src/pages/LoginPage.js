@@ -10,6 +10,11 @@ document.addEventListener('DOMContentLoaded', function () {
     const username = form.username.value;
     const password = form.password.value;
 
+    if (!username || !password) {
+      showError('Both username and password are required.');
+      return;
+    }
+
     try {
       console.log('Form submitted');
       const user = await login(username, password);
@@ -31,4 +36,14 @@ document.addEventListener('DOMContentLoaded', function () {
       errorMessage.style.display = 'block';
     }
   });
+
+  function showError(message) {
+    errorMessage.textContent = message;
+    errorMessage.classList.remove('hidden');
+    setTimeout(() => {
+      errorMessage.classList.add('hidden');
+    }, 5000);
+  }
+
+
 });

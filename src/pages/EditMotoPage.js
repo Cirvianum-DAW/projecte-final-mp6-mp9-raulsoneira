@@ -34,18 +34,33 @@ document.addEventListener('DOMContentLoaded', async function () {
       notification.classList.add('hidden');
       // Redirect back to models page
       window.location.href = 'models.html';
-    }, 3000);
+    }, 1000);
+  }
+
+  // Show error message
+  function showError(message) {
+    errorMessage.textContent = message;
+    errorMessage.classList.remove('hidden');
+    setTimeout(() => {
+      errorMessage.classList.add('hidden');
+    }, 5000);
   }
 
   // Handle form submission
   motoForm.addEventListener('submit', async function (event) {
     event.preventDefault();
-    const moto = {
-      name: nameField.value,
-      model: modelField.value,
-      descripcio: descripcioField.value,
-      img: imgField.value,
-    };
+
+    const name = nameField.value.trim();
+    const model = modelField.value.trim();
+    const descripcio = descripcioField.value.trim();
+    const img = imgField.value.trim();
+
+    if (!name || !model || !descripcio || !img) {
+      showError('All fields are required');
+      return;
+    }
+
+    const moto = { name, model, descripcio, img };
 
     try {
       if (motoIdField.value) {
