@@ -21,14 +21,36 @@ async function login(username, password) {
   throw new Error('Login failed');
 }
 
+async function register(username, password) {
+  console.log('register');
+  const newUser = {
+    username,
+    password,
+    admin: false, // Assign 'user' role by default
+  };
+
+  // Send a POST request to create a new user
+  const user = await fetchFromApi('users', {
+    method: 'POST',
+    body: newUser,
+  });
+
+  return user;
+}
+
 function logout() {
-  // ...
+  localStorage.removeItem('isAuthenticated');
 }
 
 // Check if the user is authenticated
 function isAuthenticated() {
-    const user = JSON.parse(localStorage.getItem('user'));
+  const user = JSON.parse(localStorage.getItem('user'));
   return user && user.isLoggedIn === true;
 }
 
-export { login, logout, isAuthenticated };
+function isAdmin() {
+  const user = JSON.parse(localStorage.getItem('user'));
+  return user ? user.admin : false;
+}
+
+export { login, logout, isAuthenticated, register, isAdmin };

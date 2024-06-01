@@ -17,7 +17,6 @@
   </head>
 
   <body>
-    <a href="login.html">Login</a>
     <!-- Nabvar de navegació de la pàgina -->
     <nav class="bg-white border-gray-200 dark:bg-gray-s900">
       <div
@@ -93,6 +92,13 @@
                 >Informació</a
               >
             </li>
+            <li id="manage-users-link" class="hidden">
+              <a
+                href="/public/users/users.html"
+                class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+                >Gestió d'Usuaris</a
+              >
+            </li>
             <li>
               <button
                 id="logout-button"
@@ -140,6 +146,6 @@
     <!-- Fi de container amb imatge de fons -->
   </body>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.0.0/flowbite.min.js"></script>
-  <script type="module" src="../src/components/Navbar.js"></script>
+  <script type="module" src="/src/components/Navbar.js"></script>
   <script src="/src/index.js"></script>
 </html>

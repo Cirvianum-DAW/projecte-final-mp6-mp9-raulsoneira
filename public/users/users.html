@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>YAMAHA Models</title>
+    <title>Gestió d'Usuaris</title>
     <link rel="stylesheet" href="/src/input.css" />
     <link
       rel="icon"
@@ -70,30 +70,29 @@
             </li>
             <li>
               <a
-                href="#"
-                class="block py-2 pl-3 pr-4 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 dark:text-white md:dark:text-blue-500"
-                aria-current="page"
+                href="/public/models/models.html"
+                class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
                 >Models</a
               >
             </li>
             <li>
               <a
-                href="../nosaltres/nosaltres.html"
+                href="/public/nosaltres/nosaltres.html"
                 class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
                 >Nosaltres</a
               >
             </li>
             <li>
               <a
-                href="../informacio/informacio.html"
+                href="/public/informacio/informacio.html"
                 class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
                 >Informació</a
               >
             </li>
-            <li id="manage-users-link" class="hidden">
+            <li>
               <a
                 href="/public/users/users.html"
-                class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+                class="block py-2 pl-3 pr-4 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 dark:text-white md:dark:text-blue-500"
                 >Gestió d'Usuaris</a
               >
             </li>
@@ -125,41 +124,11 @@
         class="absolute top-0 left-0 w-full h-full flex items-center justify-center"
       >
         <div class="text-white text-center">
-          <h1 class="text-5xl font-bold font-[Koulen]">Models</h1>
+          <h1 class="text-5xl font-bold font-[Koulen]">Gestió d'Usuaris</h1>
         </div>
       </div>
     </div>
     <!-- Fi de títol de la pàgina -->
-
-    <!-- Cercador i Filtre -->
-    <div class="container mx-auto p-4">
-      <div class="flex justify-center items-center mb-6">
-        <input
-          type="text"
-          id="search"
-          placeholder="Cerca per nom..."
-          class="w-1/2 px-3 py-2 border rounded-l"
-        />
-        <select
-          id="filter"
-          class="px-3 py-2 border-t border-b border-r rounded-r"
-        >
-          <option value="">Tots els models</option>
-          <option value="Naked">Naked</option>
-          <option value="Supersport">Supersport</option>
-          <option value="Adventure">Adventure</option>
-        </select>
-      </div>
-    </div>
-
-    <!-- Botó per afegir nova moto (Només visible per a administradors) -->
-    <div id="admin-options" class="container mx-auto p-4 text-center hidden">
-      <a
-        href="editMoto.html"
-        class="inline-flex items-center px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700"
-        >Add New Moto</a
-      >
-    </div>
 
     <!-- Notificació -->
     <div
@@ -167,41 +136,24 @@
       class="hidden bg-green-500 text-white text-center p-2 rounded mb-4"
     ></div>
 
-    <!-- Container amb llistat de motos -->
+    <!-- Botó per afegir un nou usuari -->
+    <div class="container mx-auto p-4 text-center">
+      <a
+        href="editUser.html"
+        class="inline-flex items-center px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700"
+        >Add New User</a
+      >
+    </div>
+
+    <!-- Container amb llistat d'usuaris -->
     <div class="container mx-auto p-4">
       <div
-        id="moto-container"
+        id="user-container"
         class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6"
       >
         <!-- El contingut es generarà dinàmicament -->
       </div>
     </div>
-
-    <!-- Botó de consulta d'altres models -->
-    <div class="flex justify-center items-center footer mb-10">
-      <a
-        href="#"
-        class="inline-flex items-center px-3 py-2 text-sm font-medium text-gray-500 hover:text-gray-800"
-      >
-        <h6>Consulta altres models</h6>
-        <svg
-          class="w-3.5 h-3.5 ml-2"
-          aria-hidden="true"
-          xmlns="http://www.w3.org/2000/svg"
-          fill="none"
-          viewBox="0 0 14 10"
-        >
-          <path
-            stroke="currentColor"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="2"
-            d="M1 5h12m0 0L9 1m4 4L9 9"
-          />
-        </svg>
-      </a>
-    </div>
-    <!-- Fi de botó de consulta d'altres models -->
 
     <!-- Footer -->
     <footer class="bg-gray-200 py-4">
@@ -216,7 +168,11 @@
             >
           </li>
           <li class="inline-block mr-4">
-            <a href="" class="text-blue-500 hover:text-blue-700">Models</a>
+            <a
+              href="/public/models/models.html"
+              class="text-blue-500 hover:text-blue-700"
+              >Models</a
+            >
           </li>
           <li class="inline-block mr-4">
             <a
@@ -237,11 +193,9 @@
     </footer>
     <!-- Fi de footer -->
 
-    <script type="module" src="simple_parallax.js"></script>
+    <script type="module" src="/src/pages/users.js"></script>
   </body>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.0.0/flowbite.min.js"></script>
-  <script type="module" src="../../src/pages/models.js"></script>
-  <script type="module" src="../../src/components/Navbar.js"></script>
-  <script type="module" src="/src/index.js"></script>
-  
+  <script type="module" src="/src/components/Navbar.js"></script>
+  <script src="/src/index.js"></script>
 </html>

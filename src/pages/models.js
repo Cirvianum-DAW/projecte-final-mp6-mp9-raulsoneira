@@ -1,14 +1,21 @@
 // js/pages/models.js
 
 import { getMotos, deleteMoto } from '../services/moto.js';
+import { isAdmin } from '../services/auth.js';
 
 document.addEventListener('DOMContentLoaded', async function () {
   const motoContainer = document.getElementById('moto-container');
   const searchInput = document.getElementById('search');
   const filterSelect = document.getElementById('filter');
   const notification = document.getElementById('notification');
+  const adminOptions = document.getElementById('admin-options');
 
   let motos = [];
+
+  // Show admin options if the user is an admin
+  if (isAdmin()) {
+    adminOptions.classList.remove('hidden');
+  }
 
   // Function to render motos
   async function renderMotos(filter = '', search = '') {
@@ -25,27 +32,35 @@ document.addEventListener('DOMContentLoaded', async function () {
       motoElement.classList.add('bg-white', 'p-4', 'rounded', 'shadow-md');
 
       motoElement.innerHTML = `
-        <img src="/img/${moto.img}.webp" alt="${moto.name}" class="w-full h-48 object-cover rounded mb-4">
+        <img src="/img/${moto.img}.webp" alt="${
+        moto.name
+      }" class="w-full h-48 object-cover rounded mb-4">
         <h3 class="text-xl font-bold mb-2">${moto.name}</h3>
         <p class="text-gray-700 mb-2">${moto.model}</p>
         <p class="text-gray-600 mb-2">${moto.descripcio}</p>
-        <a href="editMoto.html?id=${moto.id}" class="edit-moto bg-yellow-500 text-white px-4 py-2 rounded mr-2">Edit</a>
-        <button class="delete-moto bg-red-500 text-white px-4 py-2 rounded" data-id="${moto.id}">Delete</button>
+        ${
+          isAdmin()
+            ? `<a href="editMoto.html?id=${moto.id}" class="edit-moto bg-yellow-500 text-white px-4 py-2 rounded mr-2">Edit</a>
+        <button class="delete-moto bg-red-500 text-white px-4 py-2 rounded" data-id="${moto.id}">Delete</button>`
+            : ''
+        }
       `;
 
       motoContainer.appendChild(motoElement);
     });
 
     // Add event listeners for delete buttons
-    document.querySelectorAll('.delete-moto').forEach((button) => {
-      button.addEventListener('click', async function () {
-        const id = this.getAttribute('data-id');
-        await deleteMoto(id);
-        showNotification('Moto eliminada correctament');
-        await loadMotos();
-        renderMotos(filterSelect.value, searchInput.value);
+    if (isAdmin()) {
+      document.querySelectorAll('.delete-moto').forEach((button) => {
+        button.addEventListener('click', async function () {
+          const id = this.getAttribute('data-id');
+          await deleteMoto(id);
+          showNotification('Moto eliminada correctament');
+          await loadMotos();
+          renderMotos(filterSelect.value, searchInput.value);
+        });
       });
-    });
+    }
   }
 
   async function loadMotos() {
