@@ -26,13 +26,14 @@
           <img
             src="/public/resources/img/Yamaha-Logo.webp"
             class="h-10 mr-3"
-            alt="Yamaha Logo"
+            alt="Logo"
           />
           <span
             class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white"
             >YAMAHA</span
           >
         </a>
+
         <button
           data-collapse-toggle="navbar-default"
           type="button"
@@ -125,7 +126,11 @@
         class="absolute top-0 left-0 w-full h-full flex items-center justify-center"
       >
         <div class="text-white text-center">
-          <h1 class="text-5xl font-bold font-[Koulen]">Models</h1>
+          <h1
+            class="text-5xl font-bold font-[Koulen] bg-black bg-opacity-80 p-2"
+          >
+            Models
+          </h1>
         </div>
       </div>
     </div>
@@ -142,12 +147,23 @@
 
     <!-- Barra de cerca i filtre -->
     <div class="container mx-auto p-4">
+      <label
+        for="search"
+        class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300"
+        >Cerca per nom o model:</label
+      >
       <input
         type="text"
         id="search"
         placeholder="Cerca per nom o model"
         class="w-full p-2 border rounded mb-4"
       />
+
+      <label
+        for="filter"
+        class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300"
+        >Filtre:</label
+      >
       <select id="filter" class="w-full p-2 border rounded">
         <option value="">Tots els models</option>
         <option value="Naked">Naked</option>
@@ -201,29 +217,29 @@
     <!-- Footer -->
     <footer class="bg-gray-200 py-4">
       <div class="container mx-auto text-center">
-        <p class="text-gray-600">Enllaços a altres pàgines:</p>
+        <p class="text-gray-800">Enllaços a altres pàgines:</p>
         <ul class="mt-2">
           <li class="inline-block mr-4">
             <a
               href="/public/index.html"
-              class="text-blue-500 hover:text-blue-700"
+              class="text-gray-800 hover:text-blue-700"
               >Inici</a
             >
           </li>
           <li class="inline-block mr-4">
-            <a href="" class="text-blue-500 hover:text-blue-700">Models</a>
+            <a href="" class="text-gray-800 hover:text-blue-700">Models</a>
           </li>
           <li class="inline-block mr-4">
             <a
               href="/public/nosaltres/nosaltres.html"
-              class="text-blue-500 hover:text-blue-700"
+              class="text-gray-800 hover:text-blue-700"
               >Nosaltres</a
             >
           </li>
           <li class="inline-block">
             <a
               href="/public/informacio/informacio.html"
-              class="text-blue-500 hover:text-blue-700"
+              class="text-gray-800 hover:text-blue-700"
               >Informació</a
             >
           </li>
@@ -238,5 +254,4 @@
   <script type="module" src="../../src/pages/models.js"></script>
   <script type="module" src="../../src/components/Navbar.js"></script>
   <script type="module" src="/src/index.js"></script>
-  
 </html>

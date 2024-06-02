@@ -22,3 +22,95 @@
   clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
 }
 
+nav {
+  background-color: #ffffff; /* Mode clar: fons blanc */
+}
+
+nav a {
+  color: #000000; /* Mode clar: text negre */
+}
+
+nav a:hover {
+  color: #0056b3; /* Mode clar: text blau més fosc en hover */
+}
+
+nav.dark {
+  background-color: #1a202c; /* Mode fosc: fons gris fosc */
+}
+
+nav.dark a {
+  color: #ffffff; /* Mode fosc: text blanc */
+}
+
+nav.dark a:hover {
+  color: #63b3ed; /* Mode fosc: text blau clar en hover */
+}
+
+.relative .absolute .text-center h1 {
+  color: #ffffff; /* Text blanc */
+  background-color: rgba(0, 0, 0, 0.8); /* Fons negre amb opacitat del 80% per millorar el contrast */
+  padding: 0.5em;
+}
+
+.bg-blue-600 {
+  background-color: #0056b3; /* Blau més fosc */
+  color: #ffffff; /* Text blanc */
+}
+
+.bg-blue-600:hover {
+  background-color: #004494; /* Blau encara més fosc en hover */
+}
+
+.text-gray-500 {
+  color: #2d3748; /* Text gris fosc per millor contrast */
+}
+
+.text-gray-500:hover {
+  color: #1a202c; /* Text gris encara més fosc en hover */
+}
+
+/* Footer */
+footer {
+  background-color: #e2e8f0; /* Fons gris clar */
+}
+
+footer p {
+  color: #1a202c; /* Text gris fosc per millor contrast */
+}
+
+footer a {
+  color: #1a202c; /* Text gris fosc per millor contrast */
+}
+
+footer a:hover {
+  color: #2c5282; /* Text blau fosc en hover */
+}
+
+/* Botó "Edit" */
+.edit-moto {
+  background-color: #a73305; /* Groc fosc */
+  color: #ffffff; /* Text blanc */
+}
+
+.edit-moto:hover {
+  background-color: #a07409; /* Groc encara més fosc en hover */
+}
+
+.delete-moto {
+  background-color: #b91c1c; /* Vermell fosc */
+  color: #ffffff; /* Text blanc */
+}
+
+.delete-moto:hover {
+  background-color: #991b1b; /* Vermell encara més fosc en hover */
+}
+
+/* Botó Visita nuestra página */
+.bg-blue-500 {
+  background-color: #0056b3; /* Blau més fosc */
+  color: #ffffff; /* Text blanc */
+}
+
+.bg-blue-500:hover {
+  background-color: #004494; /* Blau encara més fosc en hover */
+}
